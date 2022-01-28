@@ -1,0 +1,169 @@
+<mat-card>
+  <div class="flex-container">
+    <div style="flex-grow: 1">
+      <div class="flex-container-left">
+        <div style="flex-grow: 18">
+          <img src="{{ oneObj.image }}" />
+        </div>
+
+        <div style="flex-grow: 1">
+          <span class="theType"> Type </span>
+        </div>
+
+        <div style="flex-grow: 1">
+          <span class="theTypeVal">{{ oneObj.type }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="flex-grow: 7">
+      <div class="flex-container-right">
+        <div>
+          <span class="ref">Ref. {{ myInstance.ref }}</span>
+        </div>
+
+        <div style="margin-top: -10px">
+          <span class="sub-date-time"
+            >Submitted: {{ oneObj.submissionDateTime | date: "medium" }}</span
+          >
+        </div>
+
+        <div>
+          <span class="name">{{ oneObj.familyName }},{{ oneObj.name }}</span>
+        </div>
+
+        <div style="margin-top: -7px">
+          <span class="gender-age">{{ oneObj.gender }},{{ oneObj.age }}</span>
+        </div>
+
+        <div>
+          <div class="flex-container-right-5">
+            <div style="flex-grow: 1">
+              <div>
+                <span class="nationality">Nationality</span>
+              </div>
+
+              <div>
+                <span class="nationalityVal">{{ myInstance.nationality }}</span>
+              </div>
+            </div>
+
+            <div style="flex-grow: 7">
+              <div>
+                <span class="flight">Flight #</span>
+              </div>
+
+              <div>
+                <span class="flightVal">{{ myInstance.flightNum }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-container-right-6">
+          <div style="flex-grow: 10">
+            <div>
+              <span class="arrivalDate">Arrival Date</span>
+            </div>
+            <div>
+              <span class="arrivalDateVal">{{
+                myInstance.arrivalDate | date
+              }}</span>
+            </div>
+          </div>
+
+          <div style="flex-grow: 1; ">
+            <app-button></app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <div class="row img-div">
+      <img src="{{ myInstance.image }}" />
+    </div>
+
+    <div class="row">
+      <h5 style="margin-bottom: -30px; margin-top: -10px">
+        Ref. {{ myInstance.ref }}
+      </h5>
+      <br />
+      <h5 style="margin-bottom: 0px">
+        Submitted: {{ myInstance.submissionDateTime | date: "medium" }}
+      </h5>
+
+      <p style="margin-bottom: -6px">
+        {{ myInstance.familyName }},{{ myInstance.name }}
+      </p>
+      <h5>{{ myInstance.gender }},{{ myInstance.age }}</h5>
+
+      <div class="container" style="margin-left: -10px">
+        <div class="row">
+          <h5 class="col">
+            Nationality
+            <br />
+            {{ myInstance.nationality }}
+            Type is {{ myInstance.type }}
+          </h5>
+
+          <h5 class="col">
+            Flight #
+            <br />
+            {{ myInstance.flightNum }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</mat-card>
+
+<!-- <mat-card-title>	Card title
+    <mat-card-subtitle>	Card subtitle
+    <mat-card-content>	Primary card content. Intended for blocks of text
+    <img mat-card-image>	Card image. Stretches the image to the container width
+    <mat-card-actions>	Container for buttons at the bottom of the card
+    <mat-card-footer>	Section anchored to the bottom of the card 
+        mat-card-sm-image
+    -->
+
+<!-- <mat-card>
+      <div class="container">
+        <div class="row img-div">
+          <img src="{{ oneObj.image }}" />
+        </div>
+    
+        <div class="row">
+          <h5 style="margin-bottom: -30px; margin-top: -10px">
+            Ref. {{ oneObj.ref }}
+          </h5>
+          <br />
+          <h5 style="margin-bottom: 0px">
+            Submitted: {{ oneObj.submissionDateTime | date: "medium" }}
+          </h5>
+    
+          <p style="margin-bottom: -6px">
+            {{ oneObj.familyName }},{{ oneObj.name }}
+          </p>
+          <h5>{{ oneObj.gender }},{{ oneObj.age }}</h5>
+    
+          <div class="container" style="margin-left: -10px">
+            <div class="row">
+              <h5 class="col">
+                Nationality
+                <br />
+                {{ oneObj.nationality }}
+                Type is {{ oneObj.type }}
+              </h5>
+    
+              <h5 class="col">
+                Flight #
+                <br />
+                {{ oneObj.flightNum }}
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card> -->

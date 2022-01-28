@@ -1,0 +1,70 @@
+<div class="container-main">
+  <div class="container-top" style="flex-grow: 1">
+
+    <div style="flex-grow: 1300; ">
+      <span style="color: white;">Pending Applications</span>
+    </div>
+
+    <div style="flex-grow: 2;  ">
+      
+        <!-- <mat-button-toggle-group> -->
+          <button (click)="changeView()"
+            >Switch view</button
+          >
+        <!-- </mat-button-toggle-group> -->
+      
+    </div>
+  </div>
+
+  <div style="flex-grow:1 ;">
+    <!-- <input style="width: 90rem;"   type="text"> -->
+    <br>
+    <mat-form-field fxFlex="40%">
+      <input  type="text" style="width: 87.5rem; background-color: #282828; border-color: #282828;" (keyup)="getFilteredValues($event)" placeholder="Filter">
+      <!-- matInput -->
+    </mat-form-field>
+  </div>
+
+  <div style="flex-grow: 3; margin-top:1rem ;">
+    <div *ngIf="gridView" style="width: initial">
+      <!-- <h1>Grid view is here:</h1> -->
+
+      <mat-grid-list
+        [cols]="breakpoint"
+        rowHeight="12rem"
+        (window:resize)="onResize($event)"
+        gutterSize="12px"
+      >
+        <mat-grid-tile *ngFor="let i of featuredArray">
+          <app-applicant-card [oneObj]="i"></app-applicant-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+    <div *ngIf="!gridView">
+      <!-- <h2>list view is here:</h2> -->
+      <app-table  [rowData]="featuredArray"  ></app-table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <div>
+  <mat-grid-list
+    [cols]="breakpoint"
+    rowHeight="2:0.5"
+    (window:resize)="onResize($event)"
+  >
+    <mat-grid-tile>
+      <div>123</div>
+    </mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile>5</mat-grid-tile>
+    <mat-grid-tile>6</mat-grid-tile>
+  </mat-grid-list>
+</div> -->
